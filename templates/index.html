@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework Management System</title>
+</head>
+<body>
+    <h1>Homework Management System</h1>
+
+    <h2>Add a New Homework</h2>
+    <form action="/add" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="due_date">Due Date (YYYY-MM-DD):</label>
+        <input type="text" id="due_date" name="due_date"><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject"><br><br>
+
+        <label for="assigned_to">Assigned To:</label>
+        <input type="text" id="assigned_to" name="assigned_to"><br><br>
+
+        <label for="assigned_by">Assigned By:</label>
+        <input type="text" id="assigned_by" name="assigned_by"><br><br>
+
+        <input type="submit" value="Add Homework">
+    </form>
+
+    <h2>Retrieve All Homeworks</h2>
+    <form action="/get_all" method="get">
+        <input type="submit" value="Get All Homeworks">
+    </form>
+
+    <h2>Retrieve Homeworks by Subject</h2>
+    <form action="/get_by_subject" method="post">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+        <input type="submit" value="Get Homeworks by Subject">
+    </form>
+
+    <h2>Update a Homework</h2>
+    <form action="/update" method="post">
+        <label for="homework_id">Homework ID:</label>
+        <input type="text" id="homework_id" name="homework_id"><br><br>
+
+        <label for="title">New Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="description">New Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="due_date">New Due Date (YYYY-MM-DD):</label>
+        <input type="text" id="due_date" name="due_date"><br><br>
+
+        <label for="subject">New Subject:</label>
+        <input type="text" id="subject" name="subject"><br><br>
+
+        <label for="assigned_to">New Assigned To:</label>
+        <input type="text" id="assigned_to" name="assigned_to"><br><br>
+
+        <label for="assigned_by">New Assigned By:</label>
+        <input type="text" id="assigned_by" name="assigned_by"><br><br>
+
+        <input type="submit" value="Update Homework">
+    </form>
+
+    <h2>Mark Homework as Completed</h2>
+    <form action="/mark_completed" method="post">
+        <label for="homework_id">Homework ID:</label>
+        <input type="text" id="homework_id" name="homework_id">
+        <input type="submit" value="Mark as Completed">
+    </form>
+
+    <h2>Delete a Homework</h2>
+    <form action="/delete" method="post">
+        <label for="homework_id">Homework ID:</label>
+        <input type="text" id="homework_id" name="homework_id">
+        <input type="submit" value="Delete Homework">
+    </form>
+
+    <h2>Get Homework for a Student</h2>
+    <form action="/get_for_student" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name"><br><br>
+
+        <label for="completed">Completion Status (true/false):</label>
+        <input type="text" id="completed" name="completed">
+        <input type="submit" value="Get Homeworks for Student">
+    </form>
+
+    <h2>Get Top Teacher</h2>
+    <form action="/get_top_teacher" method="get">
+        <input type="submit" value="Get Top Teacher">
+    </form>
+
+    <h2>Get Top Subject</h2>
+    <form action="/get_top_subject" method="get">
+        <input type="submit" value="Get Top Subject">
+    </form>
+
+    <h2>Generate Random Homework</h2>
+    <form action="/generate_random" method="post">
+        <label for="num_assignments">Number of Assignments:</label>
+        <input type="text" id="num_assignments" name="num_assignments">
+        <input type="submit" value="Generate Random Homework">
+    </form>
+</body>
+</html>

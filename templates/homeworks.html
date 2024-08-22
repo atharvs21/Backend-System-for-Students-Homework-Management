@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework Management System</title>
+</head>
+<body>
+    <h1>Homework Management System</h1>
+    <h2>Homeworks</h2>
+    <ul>
+        {% for hw in homeworks %}
+            <li>{{ hw }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
